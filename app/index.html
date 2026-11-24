@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Garapan Deck — tiga dompet Agent ID, satu layar</title>
+<style>
+  body { background:#0d1117; color:#e6edf3; font-family:system-ui,sans-serif; margin:0; padding:16px; }
+  h1 { font-size:20px; margin:4px 0 2px; }
+  h2 { font-size:16px; margin:20px 0 8px; }
+  .sub { color:#8b949e; font-size:13px; margin-bottom:16px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:12px; }
+  .card { background:#161b22; border:1px solid #30363d; border-radius:12px; padding:14px; }
+  .card h2 { font-size:16px; margin:0 0 4px; }
+  .card h3 { font-size:15px; margin:0 0 4px; }
+  .addr { color:#8b949e; font-size:12px; word-break:break-all; }
+  .bnb { color:#d29922; font-size:13px; margin-top:4px; }
+  ul { padding-left:18px; margin:8px 0 0; font-size:14px; line-height:1.7; }
+  .full { color:#ff7b72; font-weight:700; }
+  .ok { color:#3fb950; font-weight:700; }
+  .warn { color:#d29922; font-weight:700; }
+  .deadline { display:flex; justify-content:space-between; gap:8px; padding:8px 0; border-bottom:1px solid #21262d; font-size:14px; }
+  .past { color:#8b949e; text-decoration:line-through; }
+  .done { color:#3fb950; }
+  .price { display:flex; justify-content:space-between; gap:8px; padding:8px 0; border-bottom:1px solid #21262d; font-size:14px; }
+  .price .sym { font-weight:700; }
+  .price .val { color:#8b949e; text-align:right; }
+  .note { color:#8b949e; font-size:12px; margin-top:16px; }
+  .summary { font-size:14px; line-height:1.7; }
+  .summary b { color:#3fb950; }
+</style>
+</head>
+<body>
+<h1>🎃 Garapan Deck</h1>
+<div class="sub">Tiga dompet Agent ID, satu layar. Hanya baca — tidak pernah minta connect wallet atau tanda tangan.</div>
+
+<div class="card summary" id="agentpass"></div>
+
+<h2>Dompet</h2>
+<div class="grid" id="wallets"></div>
+
+<h2>⛏️ Mining PXIO</h2>
+<div class="grid" id="miners"></div>
+
+<h2>💲 Harga — hanya yang ada pair-nya</h2>
+<div class="card"><div id="prices"></div></div>
+
+<h2>📅 Tenggat</h2>
+<div class="card"><div id="deadlines"></div></div>
+
+<p class="note" id="updated"></p>
+<p class="note" id="checked"></p>
+<script src="app.js"></script>
+</body>
+</html>
